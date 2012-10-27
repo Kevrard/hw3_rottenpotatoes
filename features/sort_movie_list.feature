@@ -22,10 +22,13 @@ Background: movies have been added to database
   And I am on the RottenPotatoes home page
 
 Scenario: sort movies alphabetically
-  When I follow "Movie Title"
-  # your steps here
+  Given I check the following ratings: G, PG, PG-13, R
+  Then I press "Refresh"
+  Then I follow "Movie Title"  
+  Then I should see movies sorted by title
 
 Scenario: sort movies in increasing order of release date
-  When I follow "Release Date"
-  # your steps here
-
+  Given I check the following ratings: G, PG, PG-13, R
+  Then I press "Refresh"
+  Then I follow "Release Date"  
+  Then I should see movies sorted by release date

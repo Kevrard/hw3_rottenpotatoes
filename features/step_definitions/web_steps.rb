@@ -18,7 +18,6 @@
 # * http://elabs.se/blog/15-you-re-cuking-it-wrong
 #
 
-
 require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
@@ -86,13 +85,6 @@ When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
 end
 
-When /^(?:|I )check "([^"]*)"$/ do |field|
-  check(field)
-end
-
-When /^(?:|I )uncheck "([^"]*)"$/ do |field|
-  uncheck(field)
-end
 
 When /^(?:|I )choose "([^"]*)"$/ do |field|
   choose(field)
